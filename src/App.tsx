@@ -5,6 +5,8 @@ import Lenis from "@studio-freight/lenis/types";
 import Hero from "./pages/Hero";
 import ZoomParallax from "./pages/ZoomParallax";
 import Theory from "./pages/Theory";
+import AdvancedReact from "./pages/AdvancedReact";
+import PracticalSection from "./pages/PracticalSection";
 
 function App() {
   useEffect(() => {
@@ -19,11 +21,13 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div style={{ position: "relative" }}>
       <Hero />
       <ZoomParallax />
       <Theory />
-    </>
+      <PracticalSection />
+      <AdvancedReact />
+    </div>
   );
 }
 
