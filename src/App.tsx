@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./App.scss";
 import Lenis from "@studio-freight/lenis/types";
 import Hero from "./pages/Hero";
