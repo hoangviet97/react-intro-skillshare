@@ -1,5 +1,4 @@
-import { AudioOutlined } from "@ant-design/icons";
-import { Input, Space } from "antd";
+import { Input } from "antd";
 import type { GetProps } from "antd";
 
 interface Props {
