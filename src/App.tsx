@@ -4,6 +4,7 @@ import "./App.scss";
 import Lenis from "@studio-freight/lenis/types";
 import Hero from "./pages/Hero";
 import ZoomParallax from "./pages/ZoomParallax";
+import Theory from "./pages/Theory";
 
 function App() {
   useEffect(() => {
@@ -21,7 +22,7 @@ function App() {
     <>
       <Hero />
       <ZoomParallax />
-      <div>fef</div>
+      <Theory />
     </>
   );
 }

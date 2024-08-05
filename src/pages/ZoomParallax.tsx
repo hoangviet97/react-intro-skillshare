@@ -1,11 +1,11 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
-import Picture1 from "../assets/1.jpeg";
+import Picture1 from "../assets/1.jpg";
 import Picture2 from "../assets/2.jpeg";
-import Picture3 from "../assets/3.jpg";
-import Picture4 from "../assets/4.jpg";
-import Picture5 from "../assets/5.jpg";
-import Picture6 from "../assets/6.jpg";
+import Picture3 from "../assets/3.jpeg";
+import Picture4 from "../assets/4.jpeg";
+import Picture5 from "../assets/5.jpeg";
+import Picture6 from "../assets/6.jpeg";
 import Picture7 from "../assets/7.jpeg";
 import "../App.scss";
 
@@ -60,6 +60,11 @@ const ZoomParallax = () => {
           return (
             <motion.div key={index} style={{ scale }} className="el">
               <div className="imageContainer">
+                {index === 0 && (
+                  <div className="txt poppins-semibold main-gradient-color">
+                    React whaat..?
+                  </div>
+                )}
                 <img
                   src={src}
                   alt="image"
