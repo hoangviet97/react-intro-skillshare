@@ -91,10 +91,10 @@ h3 {
     color: white;
     font-size: 3rem;
   }
-}
 
-.hero-heading {
-  font-size: 10rem;
+  &-heading {
+    font-size: 10rem;
+  }
 }
 
 .main-gradient-color {
@@ -187,13 +187,20 @@ h3 {
   width: 100%;
 }
 
-.theory {
-  width: 80%;
+.x-center {
   position: relative;
   left: 50%;
   transform: translatex(-50%);
+}
+
+.theory {
+  width: 80%;
   min-height: 100vh;
   background-color: rgb(30, 30, 30);
+
+  &__sandbox {
+    margin-top: 4rem;
+  }
 
   &__dom-col:nth-child(1) {
     width: 45%;
@@ -207,7 +214,7 @@ h3 {
   &__dom-steps {
     margin-top: 3rem;
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
   &__dom-cols {
@@ -240,9 +247,6 @@ h3 {
     color: white;
     min-height: 100vh;
     width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translatex(-50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -257,37 +261,40 @@ h3 {
     }
   }
 
-  &__section {
-    margin-bottom: 10rem;
-    &-text {
-      font-size: 2.5rem;
-      color: white;
-    }
-  }
-
   &__choose {
     min-height: 100vh;
   }
 
-  &__main {
-    margin-top: 13rem;
+  &__section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &-text {
+      font-size: 2.4rem;
+      color: white;
+    }
   }
 
   &__sections {
-    margin-top: 12rem;
     width: 100%;
-  }
-
-  &__sections:nth-child(1) {
-    margin-top: 12rem;
-    width: 40%;
-    height: auto;
-    background-color: #ff6b08;
   }
 
   &__heading {
     font-size: 7rem;
     text-align: center;
+
+    &::after {
+      content: "";
+      background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+      width: 7rem;
+      height: 1.5px;
+      position: absolute;
+      display: block;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 2rem;
+    }
   }
 
   &__todo-example {
@@ -298,30 +305,32 @@ h3 {
     margin-top: 6rem;
   }
 
-  &__todo-control {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  &__todo {
+    &-control {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-  &__todo-app {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-  }
+    &-app {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+    }
 
-  &__todo-names {
-    color: rgba(198, 198, 198, 0.469);
-    font-size: 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4.5rem;
+    &-names {
+      color: rgba(198, 198, 198, 0.469);
+      font-size: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4.5rem;
 
-    a {
-      cursor: pointer;
-      transition: all 0.4s;
+      a {
+        cursor: pointer;
+        transition: all 0.4s;
+      }
     }
   }
 
@@ -377,17 +386,14 @@ h3 {
 .advanced {
   margin-top: 8rem;
   width: 80vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   text-align: center;
 }
 
 .practical {
-  margin-top: 8rem;
   width: 80vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }

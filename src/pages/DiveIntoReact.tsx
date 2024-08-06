@@ -9,7 +9,7 @@ import Picture6 from "../assets/6.jpeg";
 import Picture7 from "../assets/7.jpeg";
 import "../App.scss";
 
-const ZoomParallax = () => {
+const DiveIntoReact = () => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -81,4 +81,4 @@ const ZoomParallax = () => {
   );
 };
 
-export default ZoomParallax;
+export default DiveIntoReact;

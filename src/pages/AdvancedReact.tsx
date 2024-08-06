@@ -1,6 +1,6 @@
 const AdvancedReact = () => {
   return (
-    <div className="advanced">
+    <div className="advanced x-center">
       <h2 className="poppins-semibold main-gradient-color theory__heading">
         Advanced React
       </h2>

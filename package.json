@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.4.0",
+    "@codesandbox/sandpack-react": "^2.18.2",
     "@studio-freight/lenis": "^1.0.42",
     "antd": "^5.20.0",
     "framer-motion": "^11.3.21",
