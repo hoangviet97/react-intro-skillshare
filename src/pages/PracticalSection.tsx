@@ -1,4 +1,3 @@
-import { Button } from "antd";
 import { CopyOutlined } from "@ant-design/icons";
 
 const PracticalSection = () => {
