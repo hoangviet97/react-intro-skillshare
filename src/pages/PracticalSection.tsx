@@ -16,7 +16,7 @@ const PracticalSection = () => {
                 marginTop: "2rem",
               }}
             >
-              npm create vite@latest my-react-app -- --template react-ts
+              npm create vite@latest my-react-app -- --template react
             </div>
           </div>
         </div>
