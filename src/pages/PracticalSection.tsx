@@ -1,5 +1,3 @@
-import { CopyOutlined } from "@ant-design/icons";
-
 const PracticalSection = () => {
   return (
     <div className="practical x-center poppins-thin">
@@ -13,25 +11,12 @@ const PracticalSection = () => {
             <div
               style={{
                 color: "white",
-                fontSize: "2rem",
-                border: "1px solid grey",
+                fontSize: "2.5rem",
                 padding: "0.8rem 1rem",
+                marginTop: "2rem",
               }}
             >
               npm create vite@latest my-react-app -- --template react-ts
-            </div>
-            <div
-              style={{
-                padding: "0.8rem 1rem",
-                fontSize: "2rem",
-                background: "grey",
-                display: "flex",
-                justifyContent: "center",
-                alignContent: "center",
-                cursor: "pointer",
-              }}
-            >
-              <CopyOutlined />
             </div>
           </div>
         </div>

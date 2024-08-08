@@ -6,13 +6,6 @@ interface Props {
 }
 
 const TodoForm = ({ activeComponent }: Props) => {
-  type SearchProps = GetProps<typeof Input.Search>;
-
-  const { Search } = Input;
-
-  const onSearch: SearchProps["onSearch"] = (value, _e, info) =>
-    console.log(info?.source, value);
-
   return (
     <div
       className="todo__form"
@@ -23,13 +16,7 @@ const TodoForm = ({ activeComponent }: Props) => {
             : "white",
       }}
     >
-      <Search
-        placeholder="input search text"
-        allowClear
-        enterButton="Search"
-        size="large"
-        onSearch={onSearch}
-      />
+      <Input placeholder="input search text" allowClear size="large" />
     </div>
   );
 };

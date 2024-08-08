@@ -29,18 +29,28 @@ const Concepts = () => {
       <motion.h2
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.8 }}
         transition={{
           type: "spring",
         }}
       >
         <h2 className="poppins-semibold main-gradient-color theory__heading">
-          How does it work?
+          How does it works?
         </h2>
       </motion.h2>
       <div className="theory__sections">
         <div className="theory__section">
           <div>
-            <h3 className="poppins-medium main-gradient-color">Components</h3>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{
+                type: "spring",
+              }}
+            >
+              <h3 className="poppins-medium main-gradient-color">Components</h3>
+            </motion.div>
             <div className="theory__section-text poppins-regular">
               <span style={{ color: "#f32170" }}>React components</span> are the
               building block of React Application. They are the reusable code
@@ -136,13 +146,75 @@ const Concepts = () => {
                 <Todo activeComponent={activeComponent} />
               </div>
             </div>
+            <div className="theory__sandbox x-center" style={{ width: "80%" }}>
+              <Sandpack theme="light" template="react" />
+            </div>
           </div>
         </div>
         <div className="theory__section">
           <div>
-            <h3 className="poppins-medium main-gradient-color poppins-regular">
-              Virtual DOM
-            </h3>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{
+                type: "spring",
+              }}
+            >
+              <h3 className="poppins-medium main-gradient-color">JSX</h3>
+            </motion.div>
+            <div className="theory__section-text poppins-regular">
+              JSX, which stands for JavaScript XML, is a syntax extension for
+              JavaScript that lets you write HTML-like markup inside a
+              JavaScript file. It allows to use any expression or reference
+              dynamic property inside curly brackets.
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "3rem",
+                marginTop: "4rem",
+              }}
+            >
+              <div>
+                <p
+                  className="poppins-medium"
+                  style={{ color: "white", fontSize: "2.1rem" }}
+                >
+                  Following JSX code:
+                </p>
+                <img src={jsxCode} width="50%" />
+              </div>
+              <div>
+                <p
+                  className="poppins-medium"
+                  style={{ color: "white", fontSize: "2.1rem" }}
+                >
+                  is transformed into the this JavaScript code:
+                </p>
+                <img src={jsCode} width="50%" />
+              </div>
+            </div>
+            <div className="theory__sandbox x-center" style={{ width: "80%" }}>
+              <Sandpack theme="light" template="react" />
+            </div>
+          </div>
+        </div>
+        <div className="theory__section">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{
+                type: "spring",
+              }}
+            >
+              <h3 className="poppins-medium main-gradient-color poppins-regular">
+                Virtual DOM
+              </h3>
+            </motion.div>
             <div className="theory__dom-col">
               <div
                 className="theory__section-text poppins-regular"
@@ -185,67 +257,22 @@ const Concepts = () => {
           </div>
         </div>
         <div className="theory__section">
-          <div>
-            <h3 className="poppins-medium main-gradient-color">JSX</h3>
-            <div className="theory__section-text poppins-regular">
-              JSX, which stands for JavaScript XML, is a syntax extension for
-              JavaScript that lets you write HTML-like markup inside a
-              JavaScript file.
-            </div>
-            <div>
-              <div>
-                <p
-                  className="poppins-medium"
-                  style={{ color: "white", fontSize: "2.1rem" }}
-                >
-                  Following JSX code:
-                </p>
-                <img src={jsxCode} width="50%" />
-              </div>
-              <div>
-                <p
-                  className="poppins-medium"
-                  style={{ color: "white", fontSize: "2.1rem" }}
-                >
-                  is transformed into the this JavaScript code:
-                </p>
-                <img src={jsCode} width="50%" />
-              </div>
-            </div>
-          </div>
+          <LifecycleMethods />
         </div>
         <div className="theory__section">
           <div>
-            <h3 className="poppins-medium main-gradient-color">
-              One-way Data Binding
-            </h3>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
-              <div
-                className="theory__section-text poppins-regular"
-                style={{ paddingRight: "2.5rem" }}
-              >
-                It is a way of connecting UI elements with data that goes in one
-                direction. This improves the performance, as when there is a
-                change in the component, it will be seen in the view, and vice
-                versa, with no interference with the whole code.
-              </div>
-              <div>
-                <img src={dataBinding} width="100%" />
-              </div>
-            </div>
-            <div
-              className="theory__sandbox x-center"
-              style={{ width: "80%", marginTop: "10rem" }}
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{
+                type: "spring",
+              }}
             >
-              <Sandpack theme="light" template="react" />
-            </div>
-          </div>
-        </div>
-        <div className="theory__section">
-          <div>
-            <h3 className="poppins-medium main-gradient-color">
-              States and Props
-            </h3>
+              <h3 className="poppins-medium main-gradient-color">
+                States and Props
+              </h3>
+            </motion.div>
             <div
               style={{
                 display: "grid",
@@ -288,10 +315,51 @@ const Concepts = () => {
           </div>
         </div>
         <div className="theory__section">
-          <LifecycleMethods />
+          <Hooks />
         </div>
         <div className="theory__section">
-          <Hooks />
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{
+                type: "spring",
+              }}
+            >
+              <h3 className="poppins-medium main-gradient-color">Data flow</h3>
+            </motion.div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+              <div
+                className="theory__section-text poppins-regular"
+                style={{ paddingRight: "2.5rem" }}
+              >
+                <div>
+                  React follows a unidirectional data flow, meaning that data
+                  has one, and only one way to be transferred to other parts of
+                  the application. In essence, this means child components are
+                  not able to update the data that is coming from the parent
+                  component.
+                </div>
+                <div style={{ marginTop: "2rem" }}>Flows:</div>
+                <div style={{ marginLeft: "4rem", marginTop: "2rem" }}>
+                  <ul>
+                    <li>Parent to child</li>
+                    <li>Child to parent</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <img src={dataBinding} width="100%" />
+              </div>
+            </div>
+            <div
+              className="theory__sandbox x-center"
+              style={{ width: "80%", marginTop: "10rem" }}
+            >
+              <Sandpack theme="light" template="react" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
