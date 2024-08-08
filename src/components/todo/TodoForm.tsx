@@ -1,5 +1,4 @@
 import { Input } from "antd";
-import type { GetProps } from "antd";
 
 interface Props {
   activeComponent: string;
