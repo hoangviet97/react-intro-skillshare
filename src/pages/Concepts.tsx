@@ -39,132 +39,118 @@ const Concepts = () => {
         </h2>
       </motion.h2>
       <div className="theory__sections">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.8 }}
-          transition={{
-            type: "spring",
-          }}
-        >
-          <div className="theory__section">
-            <div>
-              <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.8 }}
-                transition={{
-                  type: "spring",
-                }}
-              >
-                <h3 className="poppins-medium main-gradient-color">
-                  Components
-                </h3>
-              </motion.div>
-              <div className="theory__section-text poppins-regular">
-                <span style={{ color: "#f32170" }}>React components</span> are
-                the building block of React Application. They are the reusable
-                code blocks containing logics and and UI elements. They have the
-                same purpose as JavaScript functions and return HTML. Components
-                make the task of building UI much easier.
+        <div className="theory__section">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{
+                type: "spring",
+              }}
+            >
+              <h3 className="poppins-medium main-gradient-color">Components</h3>
+            </motion.div>
+            <div className="theory__section-text poppins-regular">
+              <span style={{ color: "#f32170" }}>React components</span> are the
+              building block of React Application. They are the reusable code
+              blocks containing logics and and UI elements. They have the same
+              purpose as JavaScript functions and return HTML. Components make
+              the task of building UI much easier.
+            </div>
+            <div
+              style={{
+                color: "white",
+                marginTop: "3rem",
+                display: "flex",
+                flexDirection: "column",
+                gap: "3rem",
+              }}
+            >
+              <div>
+                <h4 className="poppins-medium" style={{ fontSize: "2.3rem" }}>
+                  Class components
+                </h4>
+                <ul
+                  className="poppins-regular"
+                  style={{ fontSize: "2.3rem", marginLeft: "40px" }}
+                >
+                  <li>
+                    Employ JavaScript classes that extend the React.Component
+                    class provided by React itself
+                  </li>
+                  <li>Ability to manage their own internal state</li>
+                  <li>Each class component have lifecycle methods</li>
+                </ul>
               </div>
-              <div
-                style={{
-                  color: "white",
-                  marginTop: "3rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "3rem",
-                }}
-              >
-                <div>
-                  <h4 className="poppins-medium" style={{ fontSize: "2.3rem" }}>
-                    Class components
-                  </h4>
-                  <ul
-                    className="poppins-regular"
-                    style={{ fontSize: "2.3rem", marginLeft: "40px" }}
-                  >
-                    <li>
-                      Employ JavaScript classes that extend the React.Component
-                      class provided by React itself
-                    </li>
-                    <li>Ability to manage their own internal state</li>
-                    <li>Each class component have lifecycle methods</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="poppins-medium" style={{ fontSize: "2.3rem" }}>
-                    Functional components
-                  </h4>
-                  <ul
-                    className="poppins-regular"
-                    style={{ fontSize: "2.3rem", marginLeft: "40px" }}
-                  >
-                    <li>
-                      JavaScript functions that accept props (properties) as
-                      arguments and return elements.
-                    </li>
-                    <li>
-                      They don't have built-in state or lifecycle methods (until
-                      hooks)
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="theory__todo-example">
-                <div className="theory__todo-section theory__todo-control">
-                  <div className="theory__todo-names poppins-medium">
-                    <a
-                      className="theory__todo-name"
-                      onMouseEnter={() => setActiveComponent("todo")}
-                      onMouseLeave={() => setActiveComponent("")}
-                    >
-                      &#10094;Todo /&#10095;
-                    </a>
-                    <a
-                      className="theory__todo-name"
-                      onMouseEnter={() => setActiveComponent("todoHeader")}
-                      onMouseLeave={() => setActiveComponent("")}
-                    >
-                      &#10094;TodoHeader /&#10095;
-                    </a>
-                    <a
-                      className="theory__todo-name"
-                      onMouseEnter={() => setActiveComponent("todoForm")}
-                      onMouseLeave={() => setActiveComponent("")}
-                    >
-                      &#10094;TodoForm /&#10095;
-                    </a>
-                    <a
-                      className="theory__todo-name"
-                      onMouseEnter={() => setActiveComponent("todoList")}
-                      onMouseLeave={() => setActiveComponent("")}
-                    >
-                      &#10094;TodoList /&#10095;
-                    </a>
-                    <a
-                      className="theory__todo-name"
-                      onMouseEnter={() => setActiveComponent("todoItem")}
-                      onMouseLeave={() => setActiveComponent("")}
-                    >
-                      &#10094;TodoItem /&#10095;
-                    </a>
-                  </div>
-                </div>
-                <div className="theory__todo-section theory__todo-app">
-                  <Todo activeComponent={activeComponent} />
-                </div>
-              </div>
-              <div
-                className="theory__sandbox x-center"
-                style={{ width: "80%" }}
-              >
-                <Sandpack theme="light" template="react" />
+              <div>
+                <h4 className="poppins-medium" style={{ fontSize: "2.3rem" }}>
+                  Functional components
+                </h4>
+                <ul
+                  className="poppins-regular"
+                  style={{ fontSize: "2.3rem", marginLeft: "40px" }}
+                >
+                  <li>
+                    JavaScript functions that accept props (properties) as
+                    arguments and return elements.
+                  </li>
+                  <li>
+                    They don't have built-in state or lifecycle methods (until
+                    hooks)
+                  </li>
+                </ul>
               </div>
             </div>
+            <div className="theory__todo-example">
+              <div className="theory__todo-section theory__todo-control">
+                <div className="theory__todo-names poppins-medium">
+                  <a
+                    className="theory__todo-name"
+                    onMouseEnter={() => setActiveComponent("todo")}
+                    onMouseLeave={() => setActiveComponent("")}
+                  >
+                    &#10094;Todo /&#10095;
+                  </a>
+                  <a
+                    className="theory__todo-name"
+                    onMouseEnter={() => setActiveComponent("todoHeader")}
+                    onMouseLeave={() => setActiveComponent("")}
+                  >
+                    &#10094;TodoHeader /&#10095;
+                  </a>
+                  <a
+                    className="theory__todo-name"
+                    onMouseEnter={() => setActiveComponent("todoForm")}
+                    onMouseLeave={() => setActiveComponent("")}
+                  >
+                    &#10094;TodoForm /&#10095;
+                  </a>
+                  <a
+                    className="theory__todo-name"
+                    onMouseEnter={() => setActiveComponent("todoList")}
+                    onMouseLeave={() => setActiveComponent("")}
+                  >
+                    &#10094;TodoList /&#10095;
+                  </a>
+                  <a
+                    className="theory__todo-name"
+                    onMouseEnter={() => setActiveComponent("todoItem")}
+                    onMouseLeave={() => setActiveComponent("")}
+                  >
+                    &#10094;TodoItem /&#10095;
+                  </a>
+                </div>
+              </div>
+              <div className="theory__todo-section theory__todo-app">
+                <Todo activeComponent={activeComponent} />
+              </div>
+            </div>
+            <div className="theory__sandbox x-center" style={{ width: "80%" }}>
+              <Sandpack theme="light" template="react" />
+            </div>
           </div>
-        </motion.div>
+        </div>
         <div className="theory__section">
           <div>
             <motion.div
